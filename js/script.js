@@ -1,11 +1,23 @@
-jQuery("h1").click(function() {
-  alert("This is a header.");
-});
+// jQuery("h1").click(function() {
+//   alert("This is a header.");
+// });
+//
+// jQuery("p").click(function() {
+//   alert("This is a paragraph.");
+// });
+//
+// jQuery("img").click(function() {
+//   alert("This is an image.");
+// });
 
-jQuery("p").click(function() {
-  alert("This is a paragraph.");
-});
+var elements=["header","paragraph","image"];
+var elementAbbrevs= ["h1","p","img"];
 
-jQuery("img").click(function() {
-  alert("This is an image.");
+elementAbbrevs.forEach(function(elementAbbrev){
+  $(elementAbbrev).click(function() {
+    var index = elementAbbrevs.indexOf(elementAbbrev);
+    alert("this is a  " + elements[index]);
+
+  });
+
 });
